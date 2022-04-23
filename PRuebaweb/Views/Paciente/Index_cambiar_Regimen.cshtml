@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index_cambiar_Regimen";
+}
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h3>Cambiar de EPS</h3>
+        <form action="Cambiar_Regimen/Paciente" method="post">
+            <table>
+                <tr>
+                    <td><label>Ingrese la identificacion del paciente a cambiar Regimen:</label></td>
+                    <td><input type="text" name="buscarId" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Seleccione el nuevo Regimen del Paciente:</label></td>
+                    @{
+                        var cambioRegimen = new List<SelectListItem>(){
+                            new SelectListItem()
+                            {
+                                Text = "Contributivo",
+                                Value = "1"
+                            },
+                            new SelectListItem()
+                            {
+                                Text = "Subsidiado",
+                                Value = "2"
+                            }
+                        };
+                    }
+                    <td>@Html.DropDownList("CambioRegimen", cambioRegimen)</td>
+                </tr>
+                <tr>
+
+                    <td><label>@ViewData["mensaje"] </label></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="enviar" value="Enviar" /></td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>

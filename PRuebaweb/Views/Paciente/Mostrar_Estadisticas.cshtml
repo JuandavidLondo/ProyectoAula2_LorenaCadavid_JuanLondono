@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Mostrar_Estadisticas";
+}
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h3>Estadisticas:</h3>
+        <form action="Mostrar_Estadisticas/Paciente" method="post">
+            <table>
+                <tr>
+                    <td><label>Porcentaje de Costos por Eps:</label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeSura"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeNueva"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeSalud"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeSanitas"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeSavia"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>El total de costo de tratamientos por EPS es:</label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["CostoSura"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["CostoNueva"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["CostoSalud"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["CostoSanitas"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["CostoSavia"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PacientesSaludables"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["MayorCosto"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>El porcentaje de pasientes por rango de edad es:</label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeNinos"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeAdolecentes"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeJoven"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeAdultos"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeAdultomayor"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeAnciano"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>El porcentaje de pasientes por regimen es de: </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeContributivo"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeSubsidiado"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>El porcentaje de pasientes por tipo de afiliacion es de: </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeCotizante"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["PorcentajeBeneficiario"] </label></td>
+                </tr>
+                <tr>
+                    <td><label>@ViewData["CantidadCancer"] </label></td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
