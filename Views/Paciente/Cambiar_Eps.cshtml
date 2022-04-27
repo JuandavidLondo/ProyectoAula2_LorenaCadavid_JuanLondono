@@ -1,0 +1,63 @@
+﻿    
+    @{
+        ViewBag.Title = "Cambiar_Eps";
+    }
+
+    <html>
+    <head>
+        <title>Index</title>
+    </head>
+    <body>
+        <div>
+            <h3>Cambiar de EPS</h3>
+            <form action="Paciente/Paciente" method="post">
+                <table>
+                    <tr>
+                        <td><label>Ingrese la identificacion del paciente a cambiar EPS:</label></td>
+                        <td><input type="text" name="buscId" value=" " /></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><label>seleccione la EPS a la cual se cambiara:</label></td>
+                        @{
+                            var listadoEPS = new List<SelectListItem>()                        {
+                            new SelectListItem()
+                            {
+                                Text = "Sura",
+                                Value = "1"
+                            },
+                            new SelectListItem()
+                            {
+                                Text = "Nueva Eps",
+                                Value = "2"
+                            },
+                            new SelectListItem()
+                            {
+                                Text = "Salud Total",
+                                Value = "3"
+                            },
+                            new SelectListItem()
+                            {
+                                Text = "Sanitas",
+                                Value = "4"
+                            },
+                            new SelectListItem()
+                            {
+                                Text = "Savia",
+                                Value = "5"
+                            }
+
+                        };
+                        }
+                        <td>@Html.DropDownList("NuevEps", listadoEPS)</td>
+                    </tr>
+                    <tr>
+                        <td><label>@ViewData["mensaje"]</label></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
+

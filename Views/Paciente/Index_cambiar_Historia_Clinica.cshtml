@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index_cambiar_Historia_Clinica";
+}
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h3>Cambiar de EPS</h3>
+        <form action="Cambiar_Historia_Clinica/Paciente" method="post">
+            <table>
+                <tr>
+                    <td><label>Ingrese la identificacion del paciente a cambiar EPS:</label></td>
+                    <td><input type="text" name="buscaId" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Ingrese la nueva historia clinica del paciente:</label></td>
+                    <td><input type="text" name="NuevaHistoria" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Ingrese el costo de los tratamientos:</label></td>
+                    <td><input type="number" name="NuevoCosto" value=" " /></td>
+                </tr>
+                <tr>
+
+                    <td><label>@ViewData["mensaje"] </label></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="enviar" value="Enviar" /></td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+

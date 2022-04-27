@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h3>INFORMACION DEL PACIENTE</h3>
+        <form action="Paciente/Paciente" method="post">
+            <table>
+                <tr>
+                    <td><label>Identificación:</label></td>
+                    <td><input type="text" name="id" value=" " /></td>
+                    <td><label> @ViewData["mensaje"] </label> </td>
+                </tr>
+                <tr>
+                    <td><label>Nombre: </label></td>
+                    <td><input type="text" name="nombre" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Apellidos:</label></td>
+                    <td><input type="text" name="apellidos" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha nacimiento:</label></td>
+                    <td><input type="date" name="fechaNaci" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Regimen:</label></td>
+                    @{ 
+                        var selecRegimen = new List<SelectListItem>(){
+                            new SelectListItem()
+                            {
+                                Text = "Contributivo",
+                                Value = "1"
+                            },
+                            new SelectListItem()
+                            {
+                                Text = "Subsidiado",
+                                Value = "2"
+                            }
+                        };
+                    }
+                    <td>@Html.DropDownList("seleccionarRegimen",selecRegimen)</td>
+                </tr>
+                <tr>
+                    <td><label>Semanas Cotizadas:</label></td>
+                    <td><input type="text" name="semCoti" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha de ingreso al sistema:</label></td>
+                    <td><input type="date" name="fechIngrSis" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha de Ingreso EPS:</label></td>
+                    <td><input type="date" name="fechIngrEps" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>EPS:</label></td>
+                    @{ 
+                        var listadoEPS = new List<SelectListItem>()                        {
+                            new SelectListItem()
+                            {
+                                Text = "Sura",
+                                Value = "1"
+                            },
+                            new SelectListItem()
+                            {
+                                Text = "Nueva Eps",
+                                Value = "2"
+                            },
+                            new SelectListItem()
+                            {
+                                Text = "Salud Total",
+                                Value = "3"
+                            },
+                            new SelectListItem()
+                            {
+                                Text = "Sanitas",
+                                Value = "4"
+                            },
+                            new SelectListItem()
+                            {
+                                Text = "Savia",
+                                Value = "5"
+                            }
+
+                        };
+                    }
+                   <td>@Html.DropDownList("seleccionarEps",listadoEPS)</td>
+                </tr>
+                <tr>
+                    <td><label>Historia Clinica:</label></td>
+                    <td><input type="text" name="histoClini" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Cantidad de enfermedades:</label></td>
+                    <td><input type="number" name="cantEnfer" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Enfermedad mas relevante:</label></td>
+                    <td><input type="text" name="enfeRele" value=" " /></td>
+                    <td><label>(En minuscula sin tildes)</label></td>
+                </tr>
+                <tr>
+                    <td><label>Tipo de afiliacion:</label></td>
+                    @{ 
+                        var selecAfiliacion = new List<SelectListItem>
+                        {new SelectListItem()
+                        {
+                            Text = "Cotizante",
+                            Value = "1"
+                        },
+                        new SelectListItem()
+                        {
+                            Text = "Beneficiario",
+                            Value = "2"
+                        }
+
+                        };
+                    }
+                    <td>@Html.DropDownList("seleccionarAfiliacion",selecAfiliacion)</td>
+                </tr>
+                <tr>
+                    <td><label>Costo tratamientos:</label></td>
+                    <td><input type="number" name="costTrata" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="enviar" value="Enviar" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
